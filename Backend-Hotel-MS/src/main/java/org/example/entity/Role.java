@@ -1,7 +1,6 @@
 package org.example.entity;
 
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
@@ -14,16 +13,17 @@ import java.util.List;
 @Entity
 @Table(name = "ROLE")
 public class Role {
-   @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   @Column(name = "ID")
-   private Integer id;
 
-   @Enumerated(EnumType.STRING)
-   @NonNull
-   @Column(name = "ROLENAME")
-   private RoleName roleName;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "ID")
+  private Integer id;
 
-   @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
-    private List<User> users = new ArrayList<>();
+  @Enumerated(EnumType.STRING)
+  @NonNull
+  @Column(name = "ROLENAME")
+  private RoleName roleName;
+
+  @OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
+  private List<User> users = new ArrayList<>();
 }

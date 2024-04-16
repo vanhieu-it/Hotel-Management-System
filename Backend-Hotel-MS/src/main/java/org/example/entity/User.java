@@ -28,4 +28,11 @@ public class User {
     @JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")
     private Role role;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "MAKH", referencedColumnName = "MAKH")
+    private Customer customer;
+
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "ID_NHANVIEN")
+    private Employee employee;
 }
