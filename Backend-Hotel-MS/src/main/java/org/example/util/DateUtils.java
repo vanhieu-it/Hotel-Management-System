@@ -1,6 +1,6 @@
 package org.example.util;
 
-//import org.example.exception.BadRequestException;
+import org.example.exception.BadRequestException;
 
 import java.text.SimpleDateFormat;
 import java.time.*;
@@ -28,7 +28,7 @@ public class DateUtils {
         }
       }
     } catch (Exception e) {
-      //throw new BadRequestException("invalid-date");
+      throw new BadRequestException("invalid-date");
     }
     return count - 1;
   }
@@ -52,7 +52,7 @@ public class DateUtils {
         }
       }
     } catch (Exception e) {
-      //throw new BadRequestException("invalid-date");
+      throw new BadRequestException("invalid-date");
     }
     return listDayFromTo;
   }
