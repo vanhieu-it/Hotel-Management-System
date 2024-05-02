@@ -1,6 +1,6 @@
 package org.example.util;
 
-import qlks_hdv.exception.BadRequestException;
+import org.example.exception.BadRequestException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
